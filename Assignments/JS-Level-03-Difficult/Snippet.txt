@@ -1,0 +1,84 @@
+Snippet 1
+========================
+var x = 1;
+function foo() {
+console.log(x);
+var x = 2;
+}
+foo();
+
+o/p : 1
+explaination : x is declared as a global variable. Execution enters foo() function
+and x = 1 is displayed. In next step x is assigned value 2 , who's scope is functin level.
+
+============================================================================================
+
+Snippet 2
+============
+console.log(1 + 2 + "3");
+console.log("1" + 2 + 3);
+
+o/p : 33 , 123
+explaination : 33 => first addition of 1 (number) and 2 (number) takes place and the result is 3(number). Next is contacation of 3(number) + "3"(string) and result is 33(string)
+123 = > first contacation of "1" (string) and 2 (number) takes place and result is 12(string). Next is contacation of 12(string) and 3(number) and result is 123(string)
+
+============================================================================================
+
+Snippet 3
+====================
+var x = 10;
+function foo() {
+console.log(x);
+}
+function bar() {
+var x = 20;
+foo();
+}
+bar();
+
+o/p : 10
+explaination : x = 10 is defined at global level. x = 20 is defined in function level.
+
+=========================================================================================
+
+Snippet 4
+==================
+var x = [1, 2, 3];
+x[10] = 10;
+console.log(x);
+
+o/p : [1,2,3, , , , , , , , 10]
+explaination : x = [1, 2, 3] -> size of the array is 3.
+x[10] = 10 -> this will add element to 10 postion. and the size of the arry is 11
+============================================================================================
+
+Snippet 5
+==================
+console.log(1 + '2' + '2');  // 122 
+console.log(1 + +'2' + '2'); //32
+console.log(1 + -'1' + '2');  //02
+console.log(+'1' + '1' + '2'); //112
+console.log('A' - 'B' + '2');
+console.log('A' - 'B' + 2);
+
+explaination - addition of a string with number will be contacation.
++ pr - will convert a string variable to a + or - number
+
+==============================================================================
+
+Snippet 6
+================
+var x = 1;
+function foo() {
+x = 2;
+console.log(x);
+}
+foo();
+console.log(x);
+
+output : 2, 2
+explaination : x is a global variable initalized to 1. 
+Inside the function value of x is updated to 2 ( global scope)
+If inside the function var x = 2 , then a new variable x is created 
+with value 2 and the scope is function level
+

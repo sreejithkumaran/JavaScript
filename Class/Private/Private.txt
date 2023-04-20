@@ -1,0 +1,10 @@
+Most class features have their private counterparts:
+
+    Private fields
+    Private methods
+    Private static fields
+    Private static methods
+    Private getters
+    Private setters
+    Private static getters
+    Private static setters
