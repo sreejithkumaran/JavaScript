@@ -19,6 +19,7 @@ console.log(Sum);
 
 let givenArray = [1, 4, 0, 9, -3];
 
+/*
 function sumArray(array) {
     let sum = 0;
   
@@ -31,3 +32,15 @@ function sumArray(array) {
   }
   
   sumArray(givenArray);
+*/
+  /* Push all the even elements of a given array to a new array */
+  const e = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  const evenElement = [];
+
+  e.forEach(x => {
+    if(x % 2 == 0){
+      evenElement.push(x);
+    }
+  })
+
+  console.log(`Even Array ${evenElement}`);

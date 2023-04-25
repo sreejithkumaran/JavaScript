@@ -68,3 +68,30 @@ const deletetest_words = test_words.filter((word, index, arr) => {
 console.log('Eg:03 '+deletetest_words);
 // Notice 'elite' is not even obtained as it's been popped off 'test_words' before filter can even get there
 // ["spray" ,"limit"]
+
+let arr = [ {name:'A',age:20,gender:'M'},
+            {name:'B',age:21,gender:'F'},
+            {name:'C',age:18,gender:'M'},
+            {name:'D',age:17,gender:'F'},
+            {name:'E',age:18,gender:'M'}];
+
+let males = arr.filter(function(obj){
+  return obj.gender == 'M';
+});
+
+let maleAges = arr.map(function(obj){
+  return obj.age;
+});
+
+console.log('Males : '+males);
+console.log('Males : '+maleAges);
+
+/**************************/
+let transcation = [2000, -1500, 2500, -3000, 5000, 6000, -4000];
+let positiveTransaction = transcation.filter(x => x > 0);
+console.log('Postitive Transcation : '+positiveTransaction);
+let sumOfTranscation = positiveTransaction.reduce((total, currentValue ) => total+currentValue,0);
+console.log('Total : '+sumOfTranscation);
+
+positiveTransaction = transcation.filter(x => x > 0).reduce((total, currentValue ) => total+currentValue,0);
+console.log('Postive Transcation Total : '+sumOfTranscation);

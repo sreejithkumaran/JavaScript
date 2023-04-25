@@ -26,3 +26,8 @@ const kvArray = [
   //   { key: 3, value: 30 }
   // ]
   
+
+  const transcationInDollor = [1500, 3000, 2300, 6500, 6700, 9080, 7770];
+
+  const transcationInRupee = transcationInDollor.map(x => x*80);
+  console.log(transcationInRupee);
