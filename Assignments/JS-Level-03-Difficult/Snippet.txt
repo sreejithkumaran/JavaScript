@@ -82,3 +82,45 @@ Inside the function value of x is updated to 2 ( global scope)
 If inside the function var x = 2 , then a new variable x is created 
 with value 2 and the scope is function level
 
+Date : 15/06/2023
+Snippet 8
+for (var i = 0; i < 5; i++) {
+    setTimeout(function() {
+      console.log(i);
+    }, i * 1000);
+  }
+
+output : 5 5 5 5 5
+explaination : setTime out is a call back function. 
+On entring the first loop , the function goes for a wait and the for loop completes the 
+execution and value of i = 5. And each function print the value of i which is 5
+
+
+Snippet 9
+function foo() {
+  return
+  {
+    message: "Hello"
+  };
+}
+console.log(foo());
+
+o/P = undefined
+Explaination : Nothing is returned in return function.
+
+
+Snippet 10
+var x = 1;
+var y = 2;
+(function(x, y) {
+  x = x + y; 
+  y = x - y; 
+  x = x - y;
+})(x, y);
+console.log(x, y);
+
+o/p -> 1,2
+initally values of x=1 and y=2 ( they values are global scope)
+once we enter the function(x,y) and after all the calucations value of x=3 and y=2
+the values are in local scope and are distroyed once we exit the function.
+Once we come out of the function , x and y are assigned global values
