@@ -121,6 +121,6 @@ console.log(x, y);
 
 o/p -> 1,2
 initally values of x=1 and y=2 ( they values are global scope)
-once we enter the function(x,y) and after all the calucations value of x=3 and y=2
+once we enter the function(x,y) and after all the calucations value of x=2 and y=1
 the values are in local scope and are distroyed once we exit the function.
 Once we come out of the function , x and y are assigned global values
